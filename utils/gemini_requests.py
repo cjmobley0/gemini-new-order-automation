@@ -17,8 +17,6 @@ class GemRequests:
         self._headers = None
         self._payload = None
         self.api_key = GEMINI_API_KEY
-        # self.payload_dict = None
-        # self.payload_b64 = None
         self.status_code = None
         self.error_reason = None
 
@@ -83,7 +81,6 @@ class GemRequests:
         else:
             response = requests.post(url=GEMINI_BASE_URL + endpoint, data=data, headers=self.headers)
 
-        # response = requests.post(url=GEMINI_BASE_URL + endpoint, data=data, headers=self.headers)
         self.status_code = response.status_code
         self.error_reason = self.set_error_reason(response.text)
 

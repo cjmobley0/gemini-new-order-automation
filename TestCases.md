@@ -72,7 +72,7 @@ Verify New Order request when using invalid payload then status code returns exp
     "type", "limit", 400, "InvalidOrderType"
     "options", "string-instead-of-list", 400, "OptionsMustBeArray"
     
-Verify New Order request when using missing payload key values then status code returns
+Verify New Order request when using missing payload key values then status code returns 400
     "nonce", "", 400, "MissingNonce"
     "symbol", "", 400, "MissingSymbol"
     "amount", "", 400, "MissingQuantity"
